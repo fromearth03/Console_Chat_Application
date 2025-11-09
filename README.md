@@ -138,5 +138,3 @@ Only Boost.System is required; Boost.Asio is header-only.
 Console colors work on Windows terminals.
 
 Ensure all clients connect to the correct server IP and port (127.0.0.1:8085 by default).
-
-This README allows anyone to install Boost, build, and run the project on Windows using CLion or VSCode by just replacing YOUR_VCPKG_PATH with their actual vcpkg path.
