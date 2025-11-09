@@ -37,6 +37,14 @@ void clients (tcp::socket client_socket) {
 
         {
             lock_guard<mutex> lock(lock_users);
+
+            // If username already exists, add number suffix
+            string original = username;
+            int count = 1;
+            while (users.count(username)) {
+                username = original + "(" + to_string(count++) + ")";
+            }
+
             users[username] = &client_socket;
         }
 
